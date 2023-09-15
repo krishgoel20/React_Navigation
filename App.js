@@ -19,9 +19,11 @@ const TabNavigator = createBottomTabNavigator(
     DELETE: DeleteScreen,
   },
   {
-    tabBarOptions: {
+    tabBarOptions: 
+    {
       activeTintColor: 'blue', // Change the colour for the active tab
-      labelStyle: {
+      labelStyle: 
+      {
         fontSize: 16,
       },
     },
@@ -31,10 +33,12 @@ const TabNavigator = createBottomTabNavigator(
 // Create a drawer navigator for other pages (e.g., Home and About)
 const DrawerNavigator = createDrawerNavigator(
   {
-    Home: {
+    Home: 
+    {
       screen: () => <Text>Home Screen</Text>, // Replace with your Home component
     },
-    About: {
+    About: 
+    {
       screen: () => <Text>About Screen</Text>, // Replace with your About component
     },
     Methods: TabNavigator, // Include the TabNavigator as one of the drawer options
