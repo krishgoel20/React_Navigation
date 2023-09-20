@@ -4,13 +4,13 @@ import { createAppContainer } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createDrawerNavigator } from 'react-navigation-drawer';
 
-// Import your custom screens for GET, POST, PUT, DELETE methods
+// Importing Custom screens for GET, POST, PUT, DELETE methods
 import GetScreen from './GetScreen';
 import PostScreen from './PostScreen';
 import PutScreen from './PutScreen';
 import DeleteScreen from './DeleteScreen';
 
-// Create a tab navigator for HTTP methods
+// Creating a Tab Navigator for the HTTP methods
 const TabNavigator = createBottomTabNavigator(
   {
     GET: GetScreen,
@@ -21,7 +21,7 @@ const TabNavigator = createBottomTabNavigator(
   {
     tabBarOptions: 
     {
-      activeTintColor: 'blue', // Change the colour for the active tab
+      activeTintColor: 'blue', // Changing colour for the Active Tab
       labelStyle: 
       {
         fontSize: 16,
@@ -30,25 +30,25 @@ const TabNavigator = createBottomTabNavigator(
   }
 );
 
-// Create a drawer navigator for other pages (e.g., Home and About)
+// Creating a Drawer Navigator for other pages (e.g., Home and About)
 const DrawerNavigator = createDrawerNavigator(
   {
     Home: 
     {
-      screen: () => <Text>Home Screen</Text>, // Replace with your Home component
+      screen: () => <Text>Home Screen</Text>, // Replacing with Home component
     },
     About: 
     {
-      screen: () => <Text>About Screen</Text>, // Replace with your About component
+      screen: () => <Text>About Screen</Text>, // Replacing with About component
     },
-    Methods: TabNavigator, // Include the TabNavigator as one of the drawer options
+    Methods: TabNavigator, // Including the TabNavigator as one of the Drawer options
   },
   {
-    initialRouteName: 'Home', // Set the initial page when the app loads
+    initialRouteName: 'Home', // Setting the initial page when the app loads
   }
 );
 
-// Create an app container
+// Creating an App Container
 const AppContainer = createAppContainer(DrawerNavigator);
 
 export default function App() 
